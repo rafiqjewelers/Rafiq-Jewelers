@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="ur" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>رفیق جیولرز | Rafiq Jewelers</title>
+    <style>
+        :root {
+            --primary: #1a252f;
+            --gold: #d4af37;
+            --gold-hover: #b89528;
+            --bg: #faf7f2;
+            --card-bg: #ffffff;
+            --text: #2c3e50;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: var(--primary);
+            color: var(--gold);
+            padding: 15px 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        .logo h1 {
+            font-size: 1.8rem;
+        }
+
+        .lang-btn {
+            background: var(--gold);
+            color: var(--primary);
+            border: none;
+            padding: 8px 16px;
+            font-weight: bold;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .lang-btn:hover {
+            background: var(--gold-hover);
+        }
+
+        .hero {
+            text-align: center;
+            padding: 40px 20px;
+            background: linear-gradient(rgba(26, 37, 47, 0.8), rgba(26, 37, 47, 0.8)), 
+                        url('https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?auto=format&fit=crop&w=1200&q=80') center/cover;
+            color: white;
+        }
+
+        .hero h2 {
+            color: var(--gold);
+            font-size: 2.2rem;
+            margin-bottom: 10px;
+        }
+
+        .catalog {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 30px;
+            color: var(--primary);
+            font-size: 1.8rem;
+            border-bottom: 2px solid var(--gold);
+            display: inline-block;
+            padding-bottom: 5px;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+        }
+
+        .card {
+            background: var(--card-bg);
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+            transition: transform 0.3s;
+            border: 1px solid #eee;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+        }
+
+        .card-body {
+            padding: 20px;
+            text-align: center;
+        }
+
+        .card-body h3 {
+            margin-bottom: 8px;
+            color: var(--primary);
+        }
+
+        .price {
+            color: var(--gold-hover);
+            font-weight: bold;
+            font-size: 1.2rem;
+            margin: 10px 0;
+        }
+
+        .specs {
+            font-size: 0.9rem;
+            color: #666;
+            margin-bottom: 15px;
+        }
+
+        .order-btn {
+            background-color: #25D366;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            text-decoration: none;
+        }
+
+        .order-btn:hover {
+            background-color: #1ebc57;
+        }
+
+        footer {
+            background-color: var(--primary);
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 50px;
+        }
+
+        /* LTR Layout for English */
+        body.ltr {
+            direction: ltr;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">
+            <h1 id="shop-title">رفیق جیولرز</h1>
+        </div>
+        <button class="lang-btn" onclick="toggleLanguage()">English</button>
+    </header>
+
+    <section class="hero">
+        <h2 id="hero-title">خالص سونا اور نایاب ڈیزائنز</h2>
+        <p id="hero-desc">آپ کے خاص لمحات کو مزید خوبصورت بنانے کے لیے بہترین زیورات کا انتخاب</p>
+    </section>
+
+    <main class="catalog">
+        <div style="text-align: center;">
+            <h2 class="section-title" id="catalog-title">ہماری کیٹلاگ</h2>
+        </div>
+
+        <div class="grid">
+            <!-- Product 1 -->
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?auto=format&fit=crop&w=600&q=80" alt="Gold Necklace">
+                <div class="card-body">
+                    <h3 class="p1-title">روایتی طلائی ہار</h3>
+                    <p class="specs p1-specs">عیار: 22 کیرٹ | وزن: 2 تولہ</p>
+                    <p class="price p1-price">قیمت: رابطے پر معلوم کریں</p>
+                    <a href="https://wa.me/923224608274?text=السلام%20علیکم،%20مجھے%20'روایتی%20طلائی%20ہار'%20آرڈر%20کرنا%20ہے۔" target="_blank" class="order-btn btn-text">
+                        واٹس ایپ پر آرڈر کریں
+                    </a>
+                </div>
+            </div>
+
+            <!-- Product 2 -->
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1605100804763-247f67b3557e?auto=format&fit=crop&w=600&q=80" alt="Diamond Ring">
+                <div class="card-body">
+                    <h3 class="p2-title">ڈائمنڈ انگوٹھی</h3>
+                    <p class="specs p2-specs">عیار: 18 کیرٹ وائٹ گولڈ</p>
+                    <p class="price p2-price">قیمت: رابطے پر معلوم کریں</p>
+                    <a href="https://wa.me/923000000000?text=السلام%20علیکم،%20مجھے%20'ڈائمنڈ%20انگوٹھی'%20آرڈر%20کرنا%20ہے۔" target="_blank" class="order-btn btn-text">
+                        واٹس ایپ پر آرڈر کریں
+                    </a>
+                </div>
+            </div>
+
+            <!-- Product 3 -->
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1611591475140-4987c4595e72?auto=format&fit=crop&w=600&q=80" alt="Gold Bangles">
+                <div class="card-body">
+                    <h3 class="p3-title">دلہن سیٹ / چوڑیاں</h3>
+                    <p class="specs p3-specs">عیار: 21 کیرٹ | مکمل سیٹ</p>
+                    <p class="price p3-price">قیمت: رابطے پر معلوم کریں</p>
+                    <a href="https://wa.me/923000000000?text=السلام%20علیکم،%20مجھے%20'دلہن%20سیٹ'%20آرڈر%20کرنا%20ہے۔" target="_blank" class="order-btn btn-text">
+                        واٹس ایپ پر آرڈر کریں
+                    </a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p id="footer-text">&copy; 2026 رفیق جیولرز - تمام حقوق محفوظ ہیں۔</p>
+    </footer>
+
+    <script>
+        let currentLang = 'ur';
+
+        const data = {
+            ur: {
+                shopTitle: "رفیق جیولرز",
+                langBtn: "English",
+                heroTitle: "خالص سونا اور نایاب ڈیزائنز",
+                heroDesc: "آپ کے خاص لمحات کو مزید خوبصورت بنانے کے لیے بہترین زیورات کا انتخاب",
+                catalogTitle: "ہماری کیٹلاگ",
+                p1Title: "روایتی طلائی ہار",
+                p1Specs: "عیار: 22 کیرٹ | وزن: 2 تولہ",
+                p2Title: "ڈائمنڈ انگوٹھی",
+                p2Specs: "عیار: 18 کیرٹ وائٹ گولڈ",
+                p3Title: "دلہن سیٹ / چوڑیاں",
+                p3Specs: "عیار: 21 کیرٹ | مکمل سیٹ",
+                priceText: "قیمت: رابطے پر معلوم کریں",
+                btnText: "واٹس ایپ پر آرڈر کریں",
+                footerText: "© 2026 رفیق جیولرز - تمام حقوق محفوظ ہیں۔"
+            },
+            en: {
+                shopTitle: "Rafiq Jewelers",
+                langBtn: "اردو",
+                heroTitle: "Pure Gold & Exclusive Designs",
+                heroDesc: "The finest jewelry collection to make your special moments memorable",
+                catalogTitle: "Our Catalog",
+                p1Title: "Traditional Gold Necklace",
+                p1Specs: "Purity: 22K | Weight: 2 Tola",
+                p2Title: "Diamond Ring",
+                p2Specs: "Purity: 18K White Gold",
+                p3Title: "Bridal Set / Bangles",
+                p3Specs: "Purity: 21K | Full Set",
+                priceText: "Price: Contact for Details",
+                btnText: "Order via WhatsApp",
+                footerText: "© 2026 Rafiq Jewelers - All rights reserved."
+            }
+        };
+
+        function toggleLanguage() {
+            const body = document.body;
+            if (currentLang === 'ur') {
+                currentLang = 'en';
+                body.classList.add('ltr');
+                body.setAttribute('dir', 'ltr');
+                body.setAttribute('lang', 'en');
+            } else {
+                currentLang = 'ur';
+                body.classList.remove('ltr');
+                body.setAttribute('dir', 'rtl');
+                body.setAttribute('lang', 'ur');
+            }
+
+            const l = data[currentLang];
+            document.getElementById('shop-title').innerText = l.shopTitle;
+            document.querySelector('.lang-btn').innerText = l.langBtn;
+            document.getElementById('hero-title').innerText = l.heroTitle;
+            document.getElementById('hero-desc').innerText = l.heroDesc;
+            document.getElementById('catalog-title').innerText = l.catalogTitle;
+
+            document.querySelector('.p1-title').innerText = l.p1Title;
+            document.querySelector('.p1-specs').innerText = l.p1Specs;
+            document.querySelector('.p2-title').innerText = l.p2Title;
+            document.querySelector('.p2-specs').innerText = l.p2Specs;
+            document.querySelector('.p3-title').innerText = l.p3Title;
+            document.querySelector('.p3-specs').innerText = l.p3Specs;
+
+            document.querySelectorAll('.price').forEach(el => el.innerText = l.priceText);
+            document.querySelectorAll('.btn-text').forEach(el => {
+                const textNode = el.childNodes[el.childNodes.length - 1];
+                textNode.textContent = " " + l.btnText;
+            });
+            document.getElementById('footer-text').innerText = l.footerText;
+        }
+    </script>
+</body>
+</html>
